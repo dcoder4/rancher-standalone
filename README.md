@@ -1,6 +1,6 @@
-# Simple AWS CloudFormation Template
+# Simple AWS CloudFormation Template for Rancher Single Node
 
-Simple AWS CloudFormation Template for proof of concept/non-production use
+Simple AWS CloudFormation Template for Rancher Single Node Install https://rancher.com/docs/rancher/v2.x/en/installation/single-node/
 
 ## Quick and dirty start up
 1. Clone this repo
