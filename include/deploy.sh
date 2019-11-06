@@ -35,3 +35,6 @@ chmod 755 /usr/local/bin/rke
 
 # Install helm client https://bit.ly/2uEgBiO
 snap install helm --classic
+
+# Start Rancher Single Node container
+cd /opt/rancher-standalone; docker-compose up -d
