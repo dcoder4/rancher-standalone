@@ -1,1 +1,5 @@
 params/*.json
+rancher/*
+!rancher/.gitkeep
+!certs/*
+!certs/current

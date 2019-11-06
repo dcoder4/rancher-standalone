@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+
+  rancher:
+    image: rancher/rancher:${RANCHER_VERSION:-latest}
+    command: --no-cacerts
+    container_name: rancher
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ${SSL_FULL_CHAIN_PEM_FILE:-./certs/current/fullchain.pem}:/etc/rancher/ssl/cert.pem
+      - ${SSL_PRIVATE_KEY_PEM_FILE:-./certs/current/privkey.pem}:/etc/rancher/ssl/key.pem
+      - ${RANCHER_DATA:-./rancher}:/var/lib/rancher
+    restart: always

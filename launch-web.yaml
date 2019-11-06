@@ -171,12 +171,9 @@ Resources:
                   aws_access_key_id = 
                   aws_secret_access_key = 
           runcmd:
-            - [ mkdir, -p, /opt/web/deploy ]
-            - [ aws, s3, cp, 's3://simple-web-deploy/sysad.mn/wordpress-nginx-docker/deploy.sh', /opt/web/deploy/ ]
-            - [ chmod, go-x, /opt/web/deploy ]
-            - [ chmod, ug+x, /opt/web/deploy/deploy.sh ]
-            - [ /opt/web/deploy/deploy.sh ]
-            - [ touch, /root/built ]
+            - [ git, clone, 'https://github.com/meappy/rancher-standalone.git', /opt/rancher-standalone ]
+            - [ chmod, -R, 700, /opt/rancher-standalone/include ]
+            - [ /opt/rancher-standalone/include/deploy.sh ]
           users:
             - default
           power_state:
