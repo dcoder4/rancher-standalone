@@ -38,3 +38,6 @@ snap install helm --classic
 
 # Start Rancher Single Node container
 cd /opt/rancher-standalone; docker-compose up -d
+
+# Update dyndns (edf-rke.mooo.com)
+curl -k http://freedns.afraid.org/dynamic/update.php?REY3Zm16U1lRUG9UMTM1T1doY282cWc0OjE4Nzc4OTI3
